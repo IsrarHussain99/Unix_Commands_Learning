@@ -1,0 +1,44 @@
+#! /bin/bash
+
+# $ans  Arguement A/B
+# 
+# Author Israr Hussain
+
+
+#if statement to check for valid input
+
+if [ $# -lt 1 ]
+then 
+echo "No valid input entered"
+echo "Format : lshead (directory name)"
+# checks for anything entered
+exit
+else 
+echo "Directory found..."
+echo "Enter A to view first 10 lines of ALL files in this directory"
+echo "Enter B to view last 10 lines of ALL files in this directory"
+
+#make an if statement here to make other characters not recgnisable
+
+#echo Enter A or B to view first few lines or last few lines of all files in a directory"
+
+#reads $ans to check if A is entered
+
+read ans 
+if [ $ans  == "A" ]
+then 
+echo "Displaying first few lines of all files in directory"
+head -10 $1/* 
+fi
+
+#reads $ans to check if B is entered
+if [ $ans  == "B" ]
+then
+echo "Displaying last few lines of all files in a directory" 
+tail -n -10 $1/*
+
+
+fi
+fi
+
+

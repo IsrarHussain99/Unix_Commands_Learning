@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#Author Israr Hussain
+# -d - checks for directory
+# .waste - special waste directory
+# rm - 
+
+
+if [ -d $HOME/bin/.waste ]
+then
+echo "Found waste directory"
+echo "Attempting to clean the special waste directory.........."
+rm -rf  $HOME/bin/.waste/*
+
+echo "Waste directory emptied"
+echo "Success"
+
+else 
+echo "No waste directory found"
+exit
+fi
+

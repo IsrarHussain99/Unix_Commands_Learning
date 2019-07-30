@@ -1,0 +1,20 @@
+
+#! /bin/bash
+
+# waste directory 
+
+if [ -d $HOME/bin/.waste ]
+then 
+
+ls -lR $HOME/bin/.waste | wc -l
+
+echo "number of lines in .waste directory:" "$dir"
+else
+
+echo ".waste file does not exist"
+ 
+exit
+fi
+
+ 
+

@@ -1,0 +1,28 @@
+
+#! /bin/bash
+
+# filename - name of the file you want to copy
+# newfilename - new name of the duplicated file
+# permissions
+# author Israr Hussain
+
+if [ $# -lt 1 ]
+then 
+echo "Usage Error: Command needs one arguement"
+echo "Format: own_command2 foldername"
+exit
+
+else 
+
+if [ -e $1 ] && [ -$1 ]
+then 
+echo ".gz file will now be created"
+	tar -zcvf $1.gz $1  
+echo "Successfully zipped folder" 
+
+exit
+
+fi
+fi
+
+

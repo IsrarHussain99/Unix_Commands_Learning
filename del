@@ -1,0 +1,29 @@
+#! /bin/bash
+
+if [ $# -lt 1 ]
+then 
+echo "Error: nothing entered"
+echo ""
+exit
+else
+
+# looks for waste direcory
+#creates directory if it doesnt exits.
+
+if [ -d $HOME/bin/.waste ]
+then
+echo "found .waste directory"
+
+mv $1 $HOME/bin/.waste
+echo "moved file to .waste directory"
+echo "success"
+else
+echo ".waste directory not found..."
+echo "Now Creating..."
+mkdir $HOME/bin/.waste
+
+echo ".waste directory has been created"
+
+fi 
+fi
+

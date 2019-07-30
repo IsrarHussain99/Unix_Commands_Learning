@@ -1,0 +1,21 @@
+#! /bin/bash
+# -d - checks for directory
+# ls prints filenames
+# waste directory 
+
+# checks if directory exits
+if [ -d $HOME/bin/.waste ]
+then
+
+# displays the size of the waste directory - e.g the number of files
+echo "Number of files in .waste directory"
+ls -lR $HOME/bin/.waste | wc -l 
+else
+
+echo ".waste file does not exist"
+ 
+exit
+fi
+
+ 
+

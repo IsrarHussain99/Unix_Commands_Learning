@@ -1,0 +1,23 @@
+
+#! /bin/bash
+# find - a filename that should be executable
+# permissions - allow all permissions
+
+# Israr Hussain
+
+if [  $# -lt 1 ]
+then  
+echo "Usage: Command requires at least one arguement"
+echo "chmx filename"
+exit
+else
+
+if [ -e $1 ] && [ -r $1 ]
+then 
+echo "The entered file exists"
+echo "The filename is executable and readable"
+chmod +x $1
+else
+echo "Error: $filename doesn't exist"
+fi
+fi

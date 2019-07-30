@@ -1,0 +1,22 @@
+#! /bin/bash
+#Author Israr Hussain
+if [ $# -lt 1 ]
+then
+echo "Error"
+echo "Enter Letters"
+exit
+
+else
+	echo "Please type a line of characters"
+read ans
+
+	echo "The number of Capital Letters is :"
+	Capitals= echo $ans | sed -e "s/\(.\)/\1\n/g" | grep [A-Z] | wc -l
+
+	echo "Number of number digits is :"
+	Numbers= echo $ans | sed -e "s/\(.\)/\1\n/g" | grep [0-9] | wc -l
+
+	echo "The number of lower case characters used is:"
+	LowerCase= echo $ans | sed -e "s/\(.\)/\1\n/g" | grep [a-z] | wc -l
+
+fi

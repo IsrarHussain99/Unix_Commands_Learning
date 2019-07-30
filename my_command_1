@@ -1,0 +1,26 @@
+#! /bin/bash
+
+# filename - name of the file you want to copy
+# newfilename - new name of the duplicated file
+# permissions
+# author Israr Hussain
+
+if [ $# -lt 1 ]
+then 
+echo "Usage Error: Command needs one arguement"
+echo "Enter filename for the file you require"
+exit
+
+else 
+
+if [ -e $1 ] && [ -$1 ]
+then 
+echo "filename found"
+chmod +x $1
+echo "enter name for the new duplicated file"
+newfilename = $2
+echo "Success: Duplicating File"
+cp $1 $2
+echo "Successfully Duplicated file"
+ fi 
+exit

@@ -1,0 +1,30 @@
+#!/bin/bash
+
+echo "To list first few lines Enter A, To list last few lines Enter B"
+if [ $# -lt 1 ]
+then 
+echo "Error: No Letter Entered, enther either A or B"
+echo "format: lshead A or B"
+exit
+else
+
+
+if [ $1 = "A" ]
+then
+head -10 /bin*
+exit
+else 
+echo "Enter either A or B to view list!"
+exit
+
+if [ $1 = "B" ]
+then
+tail 10 /bin*
+exit
+else 
+echo "Enter either A or B to view list"
+exit 
+
+fi 
+fi
+

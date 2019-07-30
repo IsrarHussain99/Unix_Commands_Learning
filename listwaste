@@ -1,0 +1,18 @@
+#! /bin/bash
+
+if [ -d $HOME/bin/.waste ]
+then
+echo "Looking for .waste directory" 
+echo "Now showing all files in the .waste directory below"
+ 
+#The line below lists all files in .waste directory
+du -h /$HOME/bin/.waste/*
+
+exit
+
+
+fi
+
+
+
+
